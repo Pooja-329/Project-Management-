@@ -182,7 +182,6 @@
     border-color: var(--primary);
 }
 
-/* Modal Styles */
 .modal-overlay {
     position: fixed;
     top: 0;

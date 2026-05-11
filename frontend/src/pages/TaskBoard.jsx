@@ -75,7 +75,6 @@ const TaskBoard = () => {
                 priority: 'medium',
                 project: ''
             });
-            // Refetch tasks
             const res = await api.get('/tasks');
             setTasks(res.data.data);
         } catch (err) {

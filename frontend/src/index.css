@@ -1,29 +1,29 @@
 :root {
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --primary-light: #818cf8;
+  --primary: #06122a;
+  --primary-dark: #040c22;
+  --primary-light: #26446f;
   
-  --secondary: #a855f7;
-  --secondary-dark: #9333ea;
+  --secondary: #16355d;
+  --secondary-dark: #0f2b53;
   
-  --bg-main: #0f172a;
-  --bg-card: rgba(30, 41, 59, 0.7);
-  --bg-sidebar: #1e293b;
+  --bg-main: #020815;
+  --bg-card: rgba(255, 255, 255, 0.06);
+  --bg-sidebar: #081a34;
   
   --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-dim: #64748b;
+  --text-muted: #e2e8f0;
+  --text-dim: #a4b7d4;
   
-  --border: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(99, 102, 241, 0.5);
+  --border: rgba(255, 255, 255, 0.16);
+  --border-focus: rgba(56, 115, 212, 0.45);
   
   --success: #10b981;
   --warning: #f59e0b;
   --danger: #ef4444;
   --info: #3b82f6;
 
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-border: rgba(255, 255, 255, 0.2);
   --glass-blur: blur(12px);
 
   --space-xs: 0.25rem;
@@ -110,29 +110,54 @@ a {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
+  border-radius: 0.75rem;
+  font-weight: 700;
   transition: var(--transition-normal);
   font-size: 0.875rem;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, #091530, #1b3b70);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 14px 30px rgba(0, 38, 92, 0.22);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+  box-shadow: 0 18px 36px rgba(0, 44, 110, 0.28);
 }
 
 .btn-outline {
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   color: var(--text-main);
+  background: transparent;
 }
 
 .btn-outline:hover {
-  background: var(--border);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.page-header h1,
+.page-header h2,
+.page-header h3 {
+  color: var(--text-main);
+}
+
+.page-header p {
+  color: var(--text-muted);
 }
 
 @keyframes fadeIn {
